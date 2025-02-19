@@ -29,7 +29,7 @@ code_hdf5_filenames = [
 
 if __name__ == "__main__":
     parser = argparse.ArgumentParser(description='Create virtual dataset')
-    parser.add_argument('path', type=str, nargs='?', default=os.getcwd(), help='Path to the directory containing the unzipped files (default: current working directory)')
+    parser.add_argument('path', type=str, nargs='?', default=os.getcwd(), help='Path to the directory containing the unzipped HDF5 files (default: current working directory)')
     parser.add_argument('destination', type=str, nargs='?', default=os.getcwd(), help='Directory for the .h5 files (default: current working directory)')
 
     args = parser.parse_args()
