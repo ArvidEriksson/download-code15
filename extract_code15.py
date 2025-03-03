@@ -1,5 +1,4 @@
 # Extract exams_part0.zip to exams_part17.zip
-
 import os
 import zipfile
 import argparse
@@ -7,7 +6,7 @@ import tqdm
 
 def extract_files(path, destination):
     """
-    Extract all files in a directory.
+    Extract all files in a directory and remove the zip files after extraction.
     
     Args:
         path (str): Path to the directory containing the zip files.
@@ -17,6 +16,7 @@ def extract_files(path, destination):
     for file in tqdm.tqdm(zip_files, desc="Extracting files"):
         with zipfile.ZipFile(os.path.join(path, file), 'r') as zip_ref:
             zip_ref.extractall(destination)
+        os.remove(os.path.join(path, file))
         
 def main():
     parser = argparse.ArgumentParser(description='Extract files from a directory')
