@@ -3,7 +3,7 @@ Run the following in succession. Will duplicate files when creating train/val/te
 The following will download, extract, and create splits in the current working directory
 
 ```bash
-python download_code15.py
-python extract_code15.py
-python generateh5_code15.py
+python3 download_code15.py
+python3 extract_code15.py
+python3 generateh5_code15.py
 ```
